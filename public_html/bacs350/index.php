@@ -4,9 +4,9 @@
         Create page content by rendering a template.
     */
 
-    $site_title = 'UNC BACS 350';
+    $site_title = 'Matthew Bradow - UNC BACS 350';
     
-    $page_title = "Matthew's Brain";
+    $page_title = "Matthew Bradow Home Page";
     
     $content = '
         <p>
@@ -28,13 +28,22 @@
         
         <ul>
             <li>
-                <a href="demo">Code Demos</a>
+                <a href="https://shrinking-world.com/unc/bacs350">Sensei Home Page</a>
             </li>
             <li>
-                <a href="pattern">Design Patterns</a>
+                <a href="skills">Skills</a>
             </li>
             <li>
                 <a href="project">Projects</a>
+            </li>
+            <li>
+                <a href="https://unco.instructure.com">Canvas</a>
+            </li>
+            <li>
+                <a href="https://github.com/matthew-bradow/BACS350">Github Repo</a>
+            </li>
+            <li>
+                <a href="https://github.com/Mark-Seaman/UNC-BACS350-Demo">Instructor Repo</a>
             </li>
             <li>
                 <a href="superhero">Superhero Profiles</a>
