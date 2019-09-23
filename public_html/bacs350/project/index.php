@@ -23,6 +23,12 @@
             <li>
                 <a href="02">Project #2 - Page Template</a>
             </li>
+            <li>
+                <a href="../superhero/">Project #3 - Superhero Profiles</a>
+            </li>
+            <li>
+                <a href="../planner/">Project #4 - Planner</a>
+            </li>
         </ul>
     ';
 
