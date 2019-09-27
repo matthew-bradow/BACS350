@@ -5,9 +5,8 @@
 
     // Read Markdown Text from file
     $content = render_markdown("Planner.md");
-    $todo = render_markdown("ToDo.md");
 
 
     // Display the HTML in the page
-    echo render_page('UNC BACS 350', "Matthew Bradow Project Planner", $content, &todo);
+    echo render_page("Matthew's Project Planner", "UNC BACS 350 - Brain App", $content);
 ?>

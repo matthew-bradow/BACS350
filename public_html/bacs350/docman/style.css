@@ -1,0 +1,46 @@
+body {
+    padding: 2em;
+    background-color: #d6d6d6;
+    font-family:serif;
+    background-color: #0E3D65;
+/*    #0E3D65 #F6B018*/
+}
+
+
+h1 {
+    color: #F6B018;
+    font-weight: bold;
+}
+
+h2 {
+    color: #F6B018;
+}
+
+hr {
+    border: 1px solid #F6B018;
+    width: 80%;
+    margin: 30px auto;
+}
+
+img {
+    border-radius: 20px;
+}
+
+pre {
+    border: 1px solid #F6B018;
+    box-shadow: 2px 2px 5px grey;
+    padding: 1em;
+    margin: 2em;
+}
+
+.card {
+    margin: 20px;
+    border: 1px solid #F6B018;
+}
+
+.card-header {
+    padding: 10px;
+    font-weight: bold;
+    color: #0E3D65;
+    background-color: #F6B018;
+}
