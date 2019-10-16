@@ -48,6 +48,9 @@
             <li>
                 <a href="superhero">Superhero Profiles</a>
             </li>
+            <li>
+                <a href="notes">Notes App</a>
+            </li>
         </ul>
     ';
 
