@@ -49,7 +49,13 @@
                 <a href="superhero">Superhero Profiles</a>
             </li>
             <li>
+                <a href="subscriber">Subscribers Project</a>
+            </li>
+            <li>
                 <a href="notes">Notes App</a>
+            </li>
+            <li>
+                <a href="review">Review App</a>
             </li>
         </ul>
     ';

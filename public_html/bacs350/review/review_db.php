@@ -99,7 +99,76 @@
         }
 
     }
+    
+    ////////////////////// LOG METHODS ///////////////////////
+    // Add a new record
+    function add_log($log, $text) {
 
+        // Show if insert is successful or not
+        try {
+            // Create a string for "now"
+            date_default_timezone_set("America/Denver");
+            $date = date('Y-m-d g:i:s a');
+            
+            // Add database row
+            $query = "INSERT INTO log (date, text) VALUES (:date, :text);";
+            $statement = $log->prepare($query);
+            $statement->bindValue(':date', $date);
+            $statement->bindValue(':text', $text);
+            $statement->execute();
+            $statement->closeCursor();
+            return true;
+        } catch (PDOException $e) {
+            $error_message = $e->getMessage();
+            echo "<p>Error: $error_message</p>";
+            die();
+        }
+    }
+
+
+    // Delete all database rows
+    function clear_log($log) {
+        
+        try {
+            $query = "DELETE FROM log";
+            $statement = $log->prepare($query);
+            $row_count = $statement->execute();
+            return true;
+        } catch (PDOException $e) {
+            $error_message = $e->getMessage();
+            echo "<p>Error: $error_message</p>";
+            die();
+        }
+        
+    }
+
+
+    // Query for all log
+    function query_log ($log) {
+
+        $query = "SELECT * FROM log";
+        $statement = $log->prepare($query);
+        $statement->execute();
+        return $statement->fetchAll();
+
+    }
+
+
+    /* ----------------------------------------------
+        Views
+    ---------------------------------------------- */
+
+
+    // render_list -- Loop over all of the log to make a bullet list
+    function render_log($log) {
+        $list = query_log ($log);
+        $text = '<h3>Application History</h3><ul>';
+        foreach ($list as $s) {
+            $text .= '<li>' . $s['date'] . ', ' . $s['text'] . '</li>';
+        }
+        $text .= '</ul>';
+        return $text;     
+    }
 
 
     /* -------------------------------
