@@ -13,6 +13,7 @@
     add_log($db, "bacs350/review/update.php page loaded");
 
     // Pick out the inputs fields: designer, url, report, score, date
+    $id = filter_input(INPUT_GET, 'id');
     $designer = filter_input(INPUT_POST, 'designer');
     $url = filter_input(INPUT_POST, 'url');
     $report = filter_input(INPUT_POST, 'report');

@@ -13,7 +13,7 @@
                     <meta charset="UTF-8">
                     <title>' . $page_title . '</title>
 
-                    <link rel="icon" type="image/x-icon" href="/bacs350/favicon.ico">
+                    <link rel="icon" href="/bacs350/favicon.ico">
                     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
                     <link rel="stylesheet" href="style.css">
 
@@ -27,7 +27,7 @@
                                     <div class="float-left">
                                         <img class="img-rounded img-responsive"
                                         src="/bacs350/images/Logo.png"
-                                        alt="MB Logo" width="150px">
+                                        alt="MB Logo" width="150">
                                     </div>
                                 </div>
                                 <div class="col-sm-8">

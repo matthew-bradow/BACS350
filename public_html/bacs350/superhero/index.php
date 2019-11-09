@@ -15,6 +15,7 @@
 
     
     $intro = '
+        <a href="/bacs350">Home Page</a>
         <p>
             This page was created for Project #7 for the UNC BACS 350 class.
         </p>
