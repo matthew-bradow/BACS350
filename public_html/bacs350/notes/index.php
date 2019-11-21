@@ -1,28 +1,44 @@
 <?php
-
-    // Code to define functions
+    
+    require_once 'log.php';
     require_once 'views.php';
-    require_once 'notes_views.php';
-    require_once 'notes_db.php';
+    require_once 'auth.php';
+    require_once 'note.php';
 
 
-    // List subscriber records
-    $list = render_notes(list_notes ($db));
+    // Log the page load
+    log_page();
 
-    
-    // Button to go to other views
-    $add_button = '<p><a class="button" href="insert.php">Add Note</a></p>';
 
-    
-    // Display the HTML in the page
-    $intro = '
-        <p>
-            This page was created for Project #8 for the UNC BACS 350 class.
-        </p>
-         
+    // Display the page content
+    $buttonbar = '<div><p>' . 
+        render_button('Home', '..') .
+        render_button('Show Log', 'pagelog.php') .
+        render_button('Add Note', 'index.php?action=add') . 
+        '</p></div>';
+
+
+    // Dynamic UI
+    $notes = handle_notes_actions();
+    $user  = handle_auth_actions();
+
+
+    // Text
+    $text = '
+    <h2 style="color: white;">Notes List</h2>
+    <p style="color: white;">
+        This page was created for Project #8 for the UNCO BACS 350 class. It has been modified to include authentication.
+    </p>
     ';
-    $content = "$intro $add_button $list";
+    
 
-    // Show the page
-    echo render_page('UNC BACS 350', "Project 8 - Notes Database", $content);
+    // Create main part of page content
+    $settings = array(
+        "site_title" => "UNC BACS 350 Demo",
+        "page_title" => "Demo 34 - Notes with User Auth", 
+        'user'       => user_info(),
+        "content"    => $buttonbar . $text . $notes . $user);
+
+    echo render_page($settings);
+
 ?>
