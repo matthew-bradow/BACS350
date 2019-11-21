@@ -3,6 +3,7 @@
     require_once 'log.php';
     require_once 'slides.php';
     require_once 'views.php';
+    require_once 'auth.php';
 
 
     // Log the page load
@@ -17,6 +18,9 @@
     $content .= '</p></div>';
     $content .= handle_actions();
 
+    // Dynamic UI
+    $user  = handle_auth_actions();
+
 
     // Create main part of page content
     $settings = array(
@@ -24,7 +28,7 @@
         "page_title" => "Slide Show App",
         "logo"       => "../images/Logo.png",
         "style"      => 'style.css',
-        "content"    => $content);
+        "content"    => $content . $user);
 
     echo render_page($settings);
 ?>

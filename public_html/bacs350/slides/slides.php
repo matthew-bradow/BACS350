@@ -155,6 +155,7 @@
 
     // add_slides_form -- Create an HTML form to add record.
     function add_slides_view() {
+        require_login ($page);
         log_event('Slides Add View');                   // Add View
         return render_template('add.html', array());
     }
@@ -162,6 +163,7 @@
 
     // Show form for adding a record
     function edit_slides_view($record) {
+        require_login ($page);
         log_event('Slides Edit View');                  // Edit View
         return render_template('edit.html', $record);
     }

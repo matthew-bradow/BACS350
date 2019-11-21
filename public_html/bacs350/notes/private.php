@@ -15,7 +15,7 @@
         require_login('private.php');
         
         // Display the page content
-        $content = render_button('Other Demos', '..');
+        $content = render_button('Home', '..');
         $content .= render_button('Show Log', 'pagelog.php');
         
         $content .= '<h2>Private Page</h2>
@@ -35,7 +35,7 @@
     $settings = array(
         "site_title" => "BACS 350 Demo",
         "page_title" => "Private Page (requires login)", 
-        "logo"       => "Bear.png",
+        "logo"       => "Logo.png",
         "style"      => 'style.css',
         'user'       => user_info(),
         "content"    => $content);
