@@ -1,42 +1,60 @@
 ### Design.md
-* Select your technology and tools
-* Identify the components you must build
-* Create an index of pages to build
-* App = Data + Views (design for both data and views)
-* How will you test the design?
 
+## Data Models
+* All data is stored in the database.
+### Notes
+* id - int - Primary Key
+* title - varchar(100)
+* body - text
+* date - date
+### Slides
+* id - int - Primary Key
+* title - varchar(255)
+* body - varchar(1023)
+### Superhero
+* id - int - Primary Key
+* name - varchar(100)
+* aka - varchar(100)
+* image - varchar(100)
+* description - text
+### Administration
+* id - int - Primary Key
+* email - varchar(255)
+* password - varchar(255)
+* firstName - varchar(60)
+* lastName - varchar(60)
+### Reviews
+* id - int - Primary Key
+* designer - varchar(100)
+* url - varchar(200)
+* report - text
+* score - int
+* date - date
+### Log
+* id - int - Primary Key
+* date - varchar(100)
+### Subscribers
+* id - int - Primary Key
+* name - varchar(100)
+* email - varchar(100)
 
-### Component Modules
-
-Build a PHP app that is host to the following functionality.
-
-* Documents
-* Notes
-* Slides
-* Planner
-* Reviewer
-* Subscribers
-* Superhero
-
-
-### Page navigation
-
-### Global Designs
-* Logging
-* User Administration
-* Reusable Libraries - views.php, db.php, CSS
-* Templates
-
-
-### Data Model
-* Record Structure
-* Database tables
-* Data CRUD
-
-
-### Views
+## Views
+* All pages will be built with Standard views.
 * List
-* Add
+* Detail
 * Edit
+* Add
 * Delete
+
+## Design Patters
+* Design Patterns
+* Page Render Pattern
+* Template Render Pattern
+* Logging Pattern
+* Core Views Pattern
+* CRUD Pattern
+* Database Connection Pattern
+* MVC Pattern
+* Variable Injection Pattern
+* User Auth Pattern
 
