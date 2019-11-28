@@ -1,36 +1,44 @@
 <?php
-
-    // Code to define functions
+    
+    require_once 'log.php';
     require_once 'views.php';
-    require_once 'review_views.php';
-    require_once 'review_db.php';
+    require_once 'auth.php';
+    require_once 'review.php';
 
-    header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
-    header("Cache-Control: post-check=0, pre-check=0", false);
-    header("Pragma: no-cache");
 
-    // Log this page hit
-    add_log($db, "bacs350/review/index.php page loaded");
+    // Log the page load
+    log_page();
 
-    // List review records
-    $list = render_reviews(list_reviews($db));
 
-    
-    // Button to go to other views
-    $add_button = '<p><a class="button" href="insert.php">Add Review</a></p>
+    // Display the page content
+    $buttonbar = '<div><p>' . 
+        render_button('Home', '..') .
+        render_button('Show Log', 'pagelog.php') .
+        render_button('Add Review', 'index.php?action=add') . 
+        '</p></div>';
+
+
+    // Dynamic UI
+    $reviews = handle_review_actions();
+    $user  = handle_auth_actions();
+
+
+    // Text
+    $text = '
+    <h2">Project Reviews</h2>
     <p>
-        <a href="index.php">Refresh Index Page</a>
+        This page was created for Project #9 for the UNCO BACS 350 class. It has been modified to include authentication.
     </p>
-    <p>
-        <a href="log-history.php">Show Log History</a>
-    </p>
-    <p>
-        <a href="clear.php">Clear Log History</a>
-    </p>';
-
+    ';
     
 
-    // Show the page
-    $content = "$add_button $list";
-    echo render_page('UNC BACS 350', "Project #9 - Review Manager App", $content);
+    // Create main part of page content
+    $settings = array(
+        "site_title" => "UNC BACS 350",
+        "page_title" => "Project #9 - Review Manager App", 
+        'user'       => user_info(),
+        "content"    => $buttonbar . $text . $reviews . $user);
+
+    echo render_page($settings);
+
 ?>

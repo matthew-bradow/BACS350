@@ -26,9 +26,9 @@
 
 ### Process for Review 
 * Design Review Teams
-    * member 1
-    * member 2
-    * member 3
+    * David Vandiver
+    * Devin Panikkar
+    * Kevin Ritter
 * Initial design review 
 * Designers respond to logged Issues
 * Designers mark issues as fixed

@@ -1,61 +1,49 @@
 <?php
 
-    /* ----------------------------------------------
-        This code shows how to hook up a logging utility.
-
-        usage:
-            require_once 'log.php';
-
-            // Log an event
-            $text_message = "This text message";
-            add_log($log, $text_message);
-            
-            // Show history
-            $history = render_log($log);
-            
-            // Delete all log history
-            clear_log($log);
+    require_once 'db.php';
 
 
-        SQL Database table
+    /*
+    This code shows how to hook up a logging utility.
 
-            // Create table log: date, text
-            CREATE TABLE log (
-              id int(3) NOT NULL AUTO_INCREMENT,
-              date varchar(100)  NOT NULL,
-              text varchar(100) NOT NULL,
-              PRIMARY KEY (id)
-            );
+    usage:
+        $text_message = "This text message";
+        require_once 'log.php';
+        log_event($text_message);
+        render_history();
 
-    ---------------------------------------------- */
+    SQL Database table
+
+        // Create table log: date, text
+        CREATE TABLE log (
+          id int(3) NOT NULL AUTO_INCREMENT,
+          date varchar(100)  NOT NULL,
+          text varchar(100) NOT NULL,
+          PRIMARY KEY (id)
+        );
+    */
 
 
     /* ----------------------------------------------
-        Data - CRUD Operations
-        
-        CREATE - add_log($log, $text)
-        READ   - query_log ($log)
-        UPDATE
-        DELETE - clear_log($log)
+                    D a t a
     ---------------------------------------------- */
 
+    // Record log events with timestamp page and text message
+    function log_event($text) {
+        global $db;
 
-    // Add a new record
-    function add_log($log, $text) {
+        $text = "$_SERVER[PHP_SELF] - $text";
+        $date = date('Y-m-d g:i a');   // Create a string for "now"
 
-        // Show if insert is successful or not
         try {
-            // Create a string for "now"
-            date_default_timezone_set("America/Denver");
-            $date = date('Y-m-d g:i:s a');
-            
             // Add database row
             $query = "INSERT INTO log (date, text) VALUES (:date, :text);";
-            $statement = $log->prepare($query);
+            $statement = $db->prepare($query);
             $statement->bindValue(':date', $date);
             $statement->bindValue(':text', $text);
             $statement->execute();
             $statement->closeCursor();
+            // Show if insert is successful or not
             return true;
         } catch (PDOException $e) {
             $error_message = $e->getMessage();
@@ -65,12 +53,20 @@
     }
 
 
+    // Log each page load and display the action
+    function log_page() {
+        $action = filter_input(INPUT_POST, 'action') . filter_input(INPUT_GET, 'action');
+        log_event("PAGE LOADED, action=$action");
+    }
+
+
     // Delete all database rows
-    function clear_log($log) {
-        
+    function clear_log() {
+        global $db;
+
         try {
             $query = "DELETE FROM log";
-            $statement = $log->prepare($query);
+            $statement = $db->prepare($query);
             $row_count = $statement->execute();
             return true;
         } catch (PDOException $e) {
@@ -78,67 +74,27 @@
             echo "<p>Error: $error_message</p>";
             die();
         }
-        
     }
 
 
     // Query for all log
-    function query_log ($log) {
-
+    function query_log () {
+        global $db;
         $query = "SELECT * FROM log";
-        $statement = $log->prepare($query);
+        $statement = $db->prepare($query);
         $statement->execute();
         return $statement->fetchAll();
-
     }
-
-
-    /* ----------------------------------------------
-        Views
-    ---------------------------------------------- */
 
 
     // render_list -- Loop over all of the log to make a bullet list
-    function render_log($log) {
-        $list = query_log ($log);
+    function render_history($list) {
         $text = '<h3>Application History</h3><ul>';
         foreach ($list as $s) {
-            $text .= '<li>' . $s['date'] . ', ' . $s['text'] . '</li>';
+            $text .= '<li>' . $s['id'] . ', ' . $s['date'] . ', ' . $s['text'] . '</li>';
         }
         $text .= '</ul>';
-        return $text;     
+        return $text;
     }
-
-
-    /* -------------------------------
-        DATABASE CONNECT
-    ------------------------------- */
-
-    // Connect to Bluehost database 
-    function log_database($host, $logname, $username, $password) {
-        try {
-            $log_connect = "mysql:host=$host;dbname=$logname";
-            return new PDO($log_connect, $username, $password);
-        } catch (PDOException $e) {
-            $error_message = $e->getMessage();
-            echo "<p>Error: $error_message</p>";
-            die();
-        }
-    }
-
-
-    // Connect to the Bluehost database
-    function bluehost_connect() {
-        $dbname = 'atthewb6_notes';
-        $username = 'atthewb6_test';
-        $password = 'BACS_350';
-        $port = '3306';
-        $host = "localhost:$port";
-        return log_database($host, $dbname, $username, $password);
-    }
-
-
-    // Create a database connection
-    $log = bluehost_connect(); 
 
 ?>
