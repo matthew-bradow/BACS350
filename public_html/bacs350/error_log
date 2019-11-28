@@ -1,0 +1,54 @@
+[02-Oct-2019 21:04:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'uncobacs_350'@'localhost' (using password: YES) in /home1/atthewb6/public_html/bacs350/superhero/bluehost.php:16
+Stack trace:
+#0 /home1/atthewb6/public_html/bacs350/superhero/bluehost.php(16): PDO->__construct('mysql:host=loca...', 'uncobacs_350', 'BACS_350')
+#1 {main}
+  thrown in /home1/atthewb6/public_html/bacs350/superhero/bluehost.php on line 16
+[11-Oct-2019 19:35:41 UTC] PHP Parse error:  syntax error, unexpected '$body' (T_VARIABLE) in /home1/atthewb6/public_html/bacs350/superhero/superhero_views.php on line 30
+[11-Oct-2019 19:35:43 UTC] PHP Parse error:  syntax error, unexpected '$body' (T_VARIABLE) in /home1/atthewb6/public_html/bacs350/superhero/superhero_views.php on line 30
+[11-Oct-2019 19:36:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function render_superheroes() in /home1/atthewb6/public_html/bacs350/superhero/index.php:10
+Stack trace:
+#0 {main}
+  thrown in /home1/atthewb6/public_html/bacs350/superhero/index.php on line 10
+[11-Oct-2019 19:36:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function render_superheroes() in /home1/atthewb6/public_html/bacs350/superhero/index.php:10
+Stack trace:
+#0 {main}
+  thrown in /home1/atthewb6/public_html/bacs350/superhero/index.php on line 10
+[11-Oct-2019 19:48:47 UTC] PHP Parse error:  syntax error, unexpected '$body' (T_VARIABLE) in /home1/atthewb6/public_html/bacs350/superhero/superhero_views.php on line 30
+[11-Oct-2019 19:53:33 UTC] PHP Parse error:  syntax error, unexpected '$body' (T_VARIABLE) in /home1/atthewb6/public_html/bacs350/superhero/superhero_views.php on line 30
+[11-Oct-2019 19:53:35 UTC] PHP Parse error:  syntax error, unexpected '$body' (T_VARIABLE) in /home1/atthewb6/public_html/bacs350/superhero/superhero_views.php on line 30
+[11-Oct-2019 19:53:36 UTC] PHP Parse error:  syntax error, unexpected '$body' (T_VARIABLE) in /home1/atthewb6/public_html/bacs350/superhero/superhero_views.php on line 30
+[11-Oct-2019 20:00:41 UTC] PHP Parse error:  syntax error, unexpected '$body' (T_VARIABLE) in /home1/atthewb6/public_html/bacs350/superhero/superhero_views.php on line 30
+[11-Oct-2019 20:00:43 UTC] PHP Parse error:  syntax error, unexpected '$body' (T_VARIABLE) in /home1/atthewb6/public_html/bacs350/superhero/superhero_views.php on line 30
+[11-Oct-2019 20:04:57 UTC] PHP Parse error:  syntax error, unexpected '*' in /home1/atthewb6/public_html/bacs350/superhero/superhero_views.php on line 41
+[11-Oct-2019 20:04:58 UTC] PHP Parse error:  syntax error, unexpected '*' in /home1/atthewb6/public_html/bacs350/superhero/superhero_views.php on line 41
+[11-Oct-2019 20:37:09 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/atthewb6/public_html/bacs350/superhero/insert.php:29) in /home1/atthewb6/public_html/bacs350/superhero/insert.php on line 36
+[11-Oct-2019 20:56:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/atthewb6/public_html/bacs350/superhero/insert.php:29) in /home1/atthewb6/public_html/bacs350/superhero/insert.php on line 36
+[11-Oct-2019 20:59:13 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/atthewb6/public_html/bacs350/superhero/insert.php:29) in /home1/atthewb6/public_html/bacs350/superhero/insert.php on line 36
+[11-Oct-2019 21:08:57 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/atthewb6/public_html/bacs350/superhero/insert.php:29) in /home1/atthewb6/public_html/bacs350/superhero/insert.php on line 36
+[11-Oct-2019 21:14:29 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/atthewb6/public_html/bacs350/superhero/insert.php:29) in /home1/atthewb6/public_html/bacs350/superhero/insert.php on line 36
+[11-Oct-2019 21:16:49 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/atthewb6/public_html/bacs350/superhero/insert.php:29) in /home1/atthewb6/public_html/bacs350/superhero/insert.php on line 36
+[11-Oct-2019 21:18:34 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/atthewb6/public_html/bacs350/superhero/insert.php:29) in /home1/atthewb6/public_html/bacs350/superhero/insert.php on line 36
+[11-Oct-2019 21:18:44 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/atthewb6/public_html/bacs350/superhero/insert.php:29) in /home1/atthewb6/public_html/bacs350/superhero/insert.php on line 36
+[11-Oct-2019 21:18:49 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/atthewb6/public_html/bacs350/superhero/insert.php:29) in /home1/atthewb6/public_html/bacs350/superhero/insert.php on line 36
+[11-Oct-2019 21:19:05 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/atthewb6/public_html/bacs350/superhero/insert.php:29) in /home1/atthewb6/public_html/bacs350/superhero/insert.php on line 36
+[11-Oct-2019 21:20:02 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/atthewb6/public_html/bacs350/superhero/insert.php:29) in /home1/atthewb6/public_html/bacs350/superhero/insert.php on line 36
+[11-Oct-2019 21:20:05 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/atthewb6/public_html/bacs350/superhero/insert.php:29) in /home1/atthewb6/public_html/bacs350/superhero/insert.php on line 36
+[11-Oct-2019 21:20:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/atthewb6/public_html/bacs350/superhero/insert.php:29) in /home1/atthewb6/public_html/bacs350/superhero/insert.php on line 36
+[11-Oct-2019 21:22:02 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/atthewb6/public_html/bacs350/superhero/insert.php:29) in /home1/atthewb6/public_html/bacs350/superhero/insert.php on line 36
+[11-Oct-2019 21:22:05 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/atthewb6/public_html/bacs350/superhero/insert.php:29) in /home1/atthewb6/public_html/bacs350/superhero/insert.php on line 36
+[11-Oct-2019 21:22:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/atthewb6/public_html/bacs350/superhero/insert.php:29) in /home1/atthewb6/public_html/bacs350/superhero/insert.php on line 36
+[11-Oct-2019 21:23:04 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/atthewb6/public_html/bacs350/superhero/insert.php:29) in /home1/atthewb6/public_html/bacs350/superhero/insert.php on line 36
+[11-Oct-2019 21:27:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/atthewb6/public_html/bacs350/superhero/insert.php:29) in /home1/atthewb6/public_html/bacs350/superhero/insert.php on line 36
+[16-Oct-2019 21:11:55 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/atthewb6/public_html/bacs350/superhero/insert.php:29) in /home1/atthewb6/public_html/bacs350/superhero/insert.php on line 36
+[19-Oct-2019 02:40:16 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/atthewb6/public_html/bacs350/superhero/insert.php:29) in /home1/atthewb6/public_html/bacs350/superhero/insert.php on line 36
+[21-Oct-2019 21:19:11 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/atthewb6/public_html/bacs350/superhero/insert.php:29) in /home1/atthewb6/public_html/bacs350/superhero/insert.php on line 36
+[21-Oct-2019 21:22:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/atthewb6/public_html/bacs350/superhero/insert.php:29) in /home1/atthewb6/public_html/bacs350/superhero/insert.php on line 36
+[03-Nov-2019 02:20:54 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/atthewb6/public_html/bacs350/superhero/insert.php:29) in /home1/atthewb6/public_html/bacs350/superhero/insert.php on line 36
+[04-Nov-2019 21:56:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/atthewb6/public_html/bacs350/superhero/insert.php:29) in /home1/atthewb6/public_html/bacs350/superhero/insert.php on line 36
+[04-Nov-2019 21:58:04 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/atthewb6/public_html/bacs350/superhero/insert.php:29) in /home1/atthewb6/public_html/bacs350/superhero/insert.php on line 36
+[06-Nov-2019 21:39:20 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/atthewb6/public_html/bacs350/superhero/insert.php:29) in /home1/atthewb6/public_html/bacs350/superhero/insert.php on line 36
+[18-Nov-2019 03:33:59 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/atthewb6/public_html/bacs350/superhero/insert.php:29) in /home1/atthewb6/public_html/bacs350/superhero/insert.php on line 36
+[18-Nov-2019 03:34:18 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/atthewb6/public_html/bacs350/superhero/insert.php:29) in /home1/atthewb6/public_html/bacs350/superhero/insert.php on line 36
+[20-Nov-2019 21:13:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/atthewb6/public_html/bacs350/superhero/insert.php:29) in /home1/atthewb6/public_html/bacs350/superhero/insert.php on line 36
+[27-Nov-2019 01:16:50 UTC] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in /home1/atthewb6/public_html/bacs350/superhero/superhero.php on line 59
+[27-Nov-2019 01:16:52 UTC] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in /home1/atthewb6/public_html/bacs350/superhero/superhero.php on line 59

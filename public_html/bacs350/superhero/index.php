@@ -1,27 +1,44 @@
 <?php
-
-    // Code to define functions
+    
+    require_once 'log.php';
     require_once 'views.php';
-    require_once 'superhero_views.php';
-    require_once 'superhero_db.php';
+    require_once 'auth.php';
+    require_once 'superhero.php';
 
 
-    // List superhero records
-    $list = render_superheroes(list_superheroes ($db));
+    // Log the page load
+    log_page();
 
-    
-    // Button to go to other views
-    $add_button = '<p><a class="button" href="insert.php">Add Superhero</a></p>';
 
-    
-    $intro = '
-        <a href="/bacs350">Home Page</a>
-        <p>
-            This page was created for Project #7 for the UNC BACS 350 class.
-        </p>
+    // Display the page content
+    $buttonbar = '<div><p>' . 
+        render_button('Home', '..') .
+        render_button('Show Log', 'pagelog.php') .
+        render_button('Add Superhero', 'index.php?action=add') . 
+        '</p></div>';
+
+
+    // Dynamic UI
+    $superheroes = handle_superhero_actions();
+    $user  = handle_auth_actions();
+
+
+    // Text
+    $text = '
+    <h2>Superhero List</h2>
+    <p>
+        This page was created for Project #7 for the UNC BACS 350 class. It has been modified to include authentication.
+    </p>
     ';
-    $content = "$intro $add_button $list";
+    
 
-    // Show the page
-    echo render_page('UNC BACS 350', "Superhero Registration App", $content);
+    // Create main part of page content
+    $settings = array(
+        "site_title" => "UNC BACS 350 Demo",
+        "page_title" => "Superhero Registration App", 
+        'user'       => user_info(),
+        "content"    => $buttonbar . $text . $superheroes . $user);
+
+    echo render_page($settings);
+
 ?>

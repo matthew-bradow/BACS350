@@ -31,3 +31,7 @@
 ## Milestone 4
 * Push all changes on GitHub
 * Test all pages.
+
+## Customer Interaction
+* Have customer review all parts of the application
+* Fix any issues found by the customer.

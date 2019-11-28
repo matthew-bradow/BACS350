@@ -1,0 +1,30 @@
+<h2>Delete Superhero</h2>
+
+<form action="index.php" method="post">
+
+    <table class="table table-hover">
+        <tr>
+            <td><label>Name:</label></td>
+            <td>{{ name }}</td>
+        </tr>
+        <tr>
+            <td><label>Also Known As:</label></td>
+            <td>{{ aka }}</td>
+        </tr>
+        <tr>
+            <td><label>Photo:</label></td>
+            <td>{{ image }}</td>
+        </tr>
+        <tr>
+            <td><label>Description:</label></td>
+            <td>{{ description }}</td>
+        </tr>
+        <tr>
+            <td><button class="button">Delete Record</button></td>
+        </tr>
+    </table>
+
+    <input type="hidden" name="id" value="{{ id }}">
+    <input type="hidden" name="action" value="delete">
+
+</form>
