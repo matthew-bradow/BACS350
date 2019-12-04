@@ -49,7 +49,7 @@
                                     <div class="pull-left">
                                         <img class="img-rounded img-responsive"
                                         src="/bacs350/images/Logo.png"
-                                        alt="MB Logo" width="150px">
+                                        alt="MB Logo" width="150">
                                     </div>
                                 </div>
                                 <div class="col-sm-8">

@@ -25,7 +25,7 @@
 
     // Text
     $text = '
-    <h2">Project Reviews</h2>
+    <h2>Project Reviews</h2>
     <p>
         This page was created for Project #9 for the UNCO BACS 350 class. It has been modified to include authentication.
     </p>

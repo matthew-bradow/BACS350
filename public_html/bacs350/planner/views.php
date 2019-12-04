@@ -22,7 +22,7 @@
                     <link rel="stylesheet" href="style.css">
 
                 </head>
-                <body>
+                <body style="background-color: #2D5166">
 
                     <header>
                         <div class="container-fluid">
@@ -34,8 +34,8 @@
                                 <div class="logo col-sm-4">
                                     <div class="pull-right">
                                         <img class="img-rounded img-responsive"
-                                        src="/bacs350/images/Bear.200.png"
-                                        alt="UNC Bear" width="150px">
+                                        src="/bacs350/images/Logo.png"
+                                        alt="UNC Bear" width="150">
                                     </div>
                                 </div>
                             </div>

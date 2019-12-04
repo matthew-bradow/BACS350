@@ -21,7 +21,7 @@
 
     // render_button -- Show a styled button
     function render_button($text, $url) {
-        return '<button class="btn">' . render_link($text, $url) . '</button>';
+        return render_link($text, $url);
     }
 
 
@@ -73,7 +73,7 @@
 
     // render_link -- Create a hyperlink in HTML
     function render_link($text, $url) {
-        return "<a href=\"$url\">$text</a>";
+        return "<a href=\"$url\" class=\"button\">$text</a>";
     }
 
  
